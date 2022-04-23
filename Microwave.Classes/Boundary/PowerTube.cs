@@ -5,39 +5,42 @@ namespace Microwave.Classes.Boundary
 {
     public class PowerTube : IPowerTube
     {
-        private IOutput myOutput;
+        private IOutput _output;
 
-        private bool IsOn = false;
+        private bool _isOn = false;
 
-        public PowerTube(IOutput output)
+        public int MaxPower { get; }
+
+        public PowerTube(IOutput output, int maxPower)
         {
-            myOutput = output;
+            _output = output;
+            MaxPower = maxPower;
         }
 
         public void TurnOn(int power)
         {
-            if (power < 1 || 700 < power)
+            if (power < 1 || MaxPower < power)
             {
-                throw new ArgumentOutOfRangeException("power", power, "Must be between 1 and 700 (incl.)");
+                throw new ArgumentOutOfRangeException("power", power, $"Must be between 1 and {MaxPower} (incl.)");
             }
 
-            if (IsOn)
+            if (_isOn)
             {
                 throw new ApplicationException("PowerTube.TurnOn: is already on");
             }
 
-            myOutput.OutputLine($"PowerTube works with {power}");
-            IsOn = true;
+            _output.OutputLine($"PowerTube works with {power}");
+            _isOn = true;
         }
 
         public void TurnOff()
         {
-            if (IsOn)
+            if (_isOn)
             {
-                myOutput.OutputLine($"PowerTube turned off");
+                _output.OutputLine($"PowerTube turned off");
             }
 
-            IsOn = false;
+            _isOn = false;
         }
     }
 }
