@@ -18,7 +18,7 @@ namespace Microwave.App
 
             Display display = new Display(output);
 
-            PowerTube powerTube = new PowerTube(output);
+            PowerTube powerTube = new PowerTube(output, 800);
 
             Light light = new Light(output);
 
@@ -26,7 +26,7 @@ namespace Microwave.App
 
             CookController cooker = new CookController(timer, display, powerTube);
 
-            UserInterface ui = new UserInterface(powerButton, timeButton, startCancelButton, door, display, light, cooker);
+            UserInterface ui = new UserInterface(powerButton, timeButton, startCancelButton, door, display, light, cooker,powerTube.MaxPower);
 
             // Finish the double association
             cooker.UI = ui;
