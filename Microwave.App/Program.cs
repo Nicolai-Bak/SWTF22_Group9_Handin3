@@ -15,7 +15,7 @@ namespace Microwave.App
             Door door = new Door();
 
             Output output = new Output();
-
+            
             Display display = new Display(output);
 
             PowerTube powerTube = new PowerTube(output);
