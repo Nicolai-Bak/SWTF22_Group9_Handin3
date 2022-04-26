@@ -9,7 +9,7 @@ namespace Microwave.Classes.Boundary
 
         private bool _isOn = false;
 
-        public int MaxPower { get; }
+        public int MaxPower { get; private set; }
 
         public PowerTube(IOutput output, int maxPower)
         {
