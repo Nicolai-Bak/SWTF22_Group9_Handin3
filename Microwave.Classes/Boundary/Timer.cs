@@ -23,7 +23,7 @@ namespace Microwave.Classes.Boundary
 
         public void AddTime()
         {
-            TimeRemaining += 300000; // add 30 seconds
+            TimeRemaining += 30; // add 30 seconds
         }
 
 
