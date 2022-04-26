@@ -92,9 +92,9 @@ namespace Microwave.Test.Unit
         }
 
         [Test]
-        public void Ready_15PowerButton_PowerIs50Again()
+        public void Ready_17PowerButton_PowerIs50Again()
         {
-            for (int i = 1; i <= 15; i++)
+            for (int i = 1; i <= 17; i++)
             {
                 powerButton.Pressed += Raise.EventWith(this, EventArgs.Empty);
             }
