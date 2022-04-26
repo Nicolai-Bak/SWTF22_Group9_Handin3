@@ -156,12 +156,5 @@ namespace Microwave.Classes.Controllers
             }
         }
 
-
-        public void OnAddTime(object sender, EventArgs e)
-        {
-            myTimer.AddTime();
-        }
-
-
     }
 }
