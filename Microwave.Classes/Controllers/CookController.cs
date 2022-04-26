@@ -1,4 +1,5 @@
 ﻿using System;
+using Microwave.Classes.Boundary;
 using Microwave.Classes.Interfaces;
 
 namespace Microwave.Classes.Controllers
@@ -33,6 +34,7 @@ namespace Microwave.Classes.Controllers
             myTimer = timer;
             myDisplay = display;
             myPowerTube = powerTube;
+            myBuzzer = buzzer;
 
             timer.Expired += new EventHandler(OnTimerExpired);
             timer.TimerTick += new EventHandler(OnTimerTick);
