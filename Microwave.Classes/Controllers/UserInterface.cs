@@ -16,7 +16,6 @@ namespace Microwave.Classes.Controllers
         private ICookController myCooker;
         private ILight myLight;
         private IDisplay myDisplay;
-        
 
         private int powerLevel = 50;
         private int time = 1;
@@ -74,6 +73,9 @@ namespace Microwave.Classes.Controllers
                 case States.SETTIME:
                     time += 1;
                     myDisplay.ShowTime(time, 0);
+                    break;
+                case States.COOKING:
+                    myCooker.AddTime();
                     break;
             }
         }
