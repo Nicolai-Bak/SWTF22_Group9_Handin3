@@ -22,8 +22,8 @@ namespace Microwave.Test.Unit
         [TestCase(1)]
         [TestCase(50)]
         [TestCase(100)]
-        [TestCase(699)]
-        [TestCase(700)]
+        [TestCase(799)]
+        [TestCase(800)]
         public void TurnOn_WasOffCorrectPower_CorrectOutput(int power)
         {
             uut.TurnOn(power);
