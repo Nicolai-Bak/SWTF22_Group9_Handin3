@@ -40,8 +40,6 @@ namespace Microwave.App
             timeButton.Press();
 
             startCancelButton.Press();
-            
-            buzzer.BuzzThreeTimes();
 
             // The simple sequence should now run
 
