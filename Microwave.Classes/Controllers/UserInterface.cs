@@ -16,7 +16,7 @@ namespace Microwave.Classes.Controllers
         private ICookController myCooker;
         private ILight myLight;
         private IDisplay myDisplay;
-        private ITimer myTimer;
+        
 
         private int powerLevel = 50;
         private int time = 1;
