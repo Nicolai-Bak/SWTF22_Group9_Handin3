@@ -147,5 +147,19 @@ namespace Microwave.Test.Unit
 
             Assert.That(uut.TimeRemaining, Is.EqualTo(5-ticks*1));
         }
+
+
+        [Test]
+        public void AddTime_TimeRemaining_TimeRemainingEquals65()
+        {
+            ManualResetEvent pause = new ManualResetEvent(false);
+
+            uut.Start(30);
+            pause.Set();
+            uut.AddTime();
+
+            Assert.That(uut.TimeRemaining, Is.EqualTo(60));
+        }
+
     }
 }
